@@ -17,7 +17,14 @@ const paymentMethodsInfo = [
   {
     id: 2,
     name: 'nameeeeee',
-    tableInfo: []
+    tableInfo: [
+      {
+        type: 'Neposit', methods: 'dsadaad(WebMoney)', ccy: ['USD'], min: [0.1], max: [123]
+      },
+      {
+        type: 'Profit', methods: 'moneta_plastic_payout (capitalist)(Visa/Mastercard (CupPay))', ccy: ['USD', 'RUB'], min: [1000, 20], max: [75000, 1000]
+      }
+    ]
   }
 ];
 
@@ -45,6 +52,7 @@ function createSelect(whereToInsertNode, infoArr) {
 
 function createTable(objPayment) {
   const table = document.createElement('table');
+  table.classList.add('table')
 
   const TrLines = objPayment.tableInfo.map(item => `
     <tr>

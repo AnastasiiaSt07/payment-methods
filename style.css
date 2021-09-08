@@ -1,11 +1,28 @@
-table {
+.table {
   width: 100%; /* Ширина таблицы */
   background: white; /* Цвет фона таблицы */
   color: black; /* Цвет текста */
   border-spacing: 1px; /* Расстояние между ячейками */
 }
-td,
-th {
-  background: silver; /* Цвет фона ячеек */
+
+.table td,
+.table th {
   padding: 5px; /* Поля вокруг текста */
+}
+
+.table th {
+  background: rgb(63, 63, 63); /* Цвет фона ячеек */
+  color: white;
+}
+.table td {
+  background: rgb(196, 196, 196); /* Цвет фона ячеек */
+}
+
+.table td::selection,
+.table th::selection {
+  background-color: rgb(48, 158, 248);
+}
+
+.place-table {
+  margin-top: 30px;
 }
